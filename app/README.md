@@ -1,4 +1,4 @@
-# pizza_manager
+# Nuxt Boilerplate
 
 ## Build Setup
 

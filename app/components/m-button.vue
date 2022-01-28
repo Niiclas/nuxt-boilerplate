@@ -1,6 +1,6 @@
 <template>
   <button
-    class="btn btn-outline"
+    class="btn"
     :class="{ 'btn-primary': primary }"
     @click="$emit('click')"
   >

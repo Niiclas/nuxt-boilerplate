@@ -7,11 +7,10 @@
       </a>
     </label>
     <input
+      v-model="datamodel"
       type="text"
       :placeholder="placeholder"
-      class="input input-bordered"
-      :value="value"
-      @input="(val) => $emit('input', val)"
+      class="input input-md input-primary"
     />
     <label v-if="labelBottomleft || labelBottomRight" class="label">
       <a v-if="labelBottomleft" href="#" class="label-text-alt">{{
@@ -32,6 +31,17 @@ export default {
     labelTopRight: { type: String, default: null },
     labelBottomRight: { type: String, default: null },
     labelBottomleft: { type: String, default: null },
+    badge: { type: String, default: null },
+  },
+  computed: {
+    datamodel: {
+      get() {
+        return this.value
+      },
+      set(val) {
+        this.$emit('input', val)
+      },
+    },
   },
 }
 </script>
