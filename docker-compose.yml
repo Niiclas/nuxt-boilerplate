@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  node:
+    user: 1000:1000
+    image: node
+    working_dir: /app
+    command: sh -c "yarn install && yarn dev"
+    environment:
+      - NUXT_HOST=0.0.0.0
+      - NUXT_PORT=3000
+    volumes:
+      - ./app:/app
+    ports:
+      - 3000:3000
+      - 3030:3000
