@@ -30,8 +30,7 @@ export default {
     placeholder: { type: String, default: null },
     labelTopRight: { type: String, default: null },
     labelBottomRight: { type: String, default: null },
-    labelBottomleft: { type: String, default: null },
-    badge: { type: String, default: null },
+    labelBottomleft: { type: String, default: null }
   },
   computed: {
     datamodel: {
